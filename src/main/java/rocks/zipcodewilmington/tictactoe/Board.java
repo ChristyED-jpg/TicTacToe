@@ -51,32 +51,31 @@ public class Board {
             }
             // i = 2
             // [2][0], [2][1], [2][2]
-
-            return false;
         }
+        return false;
+    }
 
-
-
-        public Boolean isInFavorOfO() {
+        public Boolean isInFavorOfO () {
 
             return checkRow('0') || checkColumn('0') || checkDiagonal('0');
         }
 
 
-        public Boolean isTie() {
-       if (isInFavorOfO() == isInFavorOfX()){
-        /// FALSE ++ FALSE  -> TIE
-        // both return false because there is winner
-            return false;
+        public Boolean isTie () {
+           return  (isInFavorOfO() == isInFavorOfX());
+
+
+
         }
 
         public String getWinner () {
             if (isInFavorOfX()) {
                 return "O";
-            }else if (isInFavorOfX()){
+            } else if (isInFavorOfX()) {
                 return "X";
-            }else return "";
+            } else return "";
 
 
         }
 
+    }
